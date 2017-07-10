@@ -1,0 +1,288 @@
+<div class="js-bottomHeader" style="margin-top: 65px;">
+    <script>
+        $(document).mouseup(function () {
+            $(".cms-app-badge-tt-bg").hide();
+            $(".cms-arrow-up").hide();
+        });
+
+        $(document).ready(function () {
+            $("#js-tooltip-interact").click(function () {
+                $(".cms-app-badge-tt-bg").toggle();
+                $(".cms-arrow-up").toggle();
+            });
+        });
+    </script>
+    <style>
+        .cms-usp-block-container {
+            width: 994px;
+            height: 30px;
+            margin: 0 auto;
+            padding: 10px 0px;
+        }
+
+        .cms-usp-icon {
+            float: left;
+        }
+
+        .cms-usp-name {
+            font-size: 11px;
+            margin-left: 5px;
+            padding-top: 4px;
+            margin-right: 25px;
+        }
+
+        .cms-usp-separator {
+            float: left;
+            width: 12px;
+            height: 30px;
+        }
+
+        .cms-app-badge {
+            background: #5C5C5C;
+            font-size: 11px;
+            display: inline-block;
+            margin-right: 0px;
+            margin-top: -8px;
+            opacity: 0.8;
+            padding-top: 7px;
+            padding-bottom: 6px;
+            padding-left: 15px;
+            padding-right: 8px;
+            color: #fff;
+            -webkit-border-radius: 6px;
+            -moz-border-radius: 6px;
+            border-radius: 6px;
+            -webkit-transition: all .3s ease-out;
+            -moz-transition: all .3s ease-out;
+            -o-transition: all .3s ease-out;
+            transition: all .3s ease-out
+        }
+
+        .cms-app-badge:hover {
+            cursor: pointer;
+            opacity: 0.6;
+        }
+
+        .cms-app-badge-tt-bg {
+            position: absolute;
+            margin-left: 793px;
+            margin-top: 40px;
+            padding: 17px 10px;
+            width: 182px;
+            background: #ccc;
+            text-align: center;
+            z-index: 100;
+            -webkit-box-shadow: 0px 3px 5px 0px rgba(215, 215, 215, 1);
+            -moz-box-shadow: 0px 3px 5px 0px rgba(215, 215, 215, 1);
+            box-shadow: 0px 3px 5px 0px rgba(215, 215, 215, 1);
+            display: none;
+        }
+
+        .cms-app-badge-discount-text {
+            font-family: Arial, ApercuBold, Arial, sans-serif;
+            font-size: 10.5px;
+            line-height: 1.6em;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .cms-app-badge-text {
+            font-family: Arial, Apercu, Arial, sans-serif;
+            font-size: 11px;
+            line-height: 1.4em;
+            text-transform: uppercase;
+        }
+
+        .cms-clear-10 {
+            width: 100%;
+            height: 10px;
+        }
+
+        .cms-clear-4 {
+            width: 100%;
+            height: 4px;
+        }
+
+        .cms-app-badge-platform-text {
+            font-family: Arial, Apercu, Arial, sans-serif;
+            font-size: 9.5px;
+            line-height: 1.8em;
+            text-transform: uppercase;
+            color: #7b7b7b;
+        }
+
+        .cms-app-badge:hover {
+            cursor: pointer;
+            opacity: 0.6;
+        }
+
+        .cms-arrow-up {
+            position: absolute;
+            margin-left: 882px;
+            margin-top: 29px;
+            width: 0;
+            height: 0;
+            border-left: 9px solid transparent;
+            border-right: 9px solid transparent;
+            border-bottom: 13px solid #ccc;
+            display: none;
+        }
+
+        .sprite-cms-usp-sprite-call {
+            width: 26px;
+            height: 28px;
+            background-image: url('https://static-cf-vn.thezalora.space/cms/images/FAQ.png');
+        }
+    </style>
+
+    <div class="cms-usp-block-container">
+
+        <div class="lfloat icon_usp_30return cms-icon-align"></div>
+        <div class="lfloat cms-usp-name txtUpper"><a href="http://support.robins.vn/hc/vi/categories/200435114" target="_blank">30 NGÀY MIỄN PHÍ ĐỔI TRẢ</a></div>
+
+        <div class="lfloat icon_usp_deliveryfree cms-icon-align"></div>
+        <div class="lfloat cms-usp-name txtUpper"><a href="http://support.robins.vn/hc/vi/articles/205632134-Ph%C3%AD-v%E1%BA%ADn-chuy%E1%BB%83n" target="_blank">MIỄN PHÍ GIAO HÀNG TỪ 449K</a></div>
+
+        <div class="lfloat icon_usp_cod cms-icon-align"></div>
+        <div class="lfloat cms-usp-name txtUpper"><a href="http://support.robins.vn/hc/vi/sections/201042104-C%C3%A1c-h%C3%ACnh-th%E1%BB%A9c-thanh-to%C3%A1n" target="_blank">THANH TOÁN KHI NHẬN HÀNG</a></div>
+
+        <div class="lfloat usp-sprite sprite-cms-usp-sprite-call"></div>
+        <div class="lfloat cms-usp-name txtUpper"><a href="http://support.robins.vn/hc/vi" target="_blank">HỎI ĐÁP?</a></div>
+
+
+        <div id="js-tooltip-interact" class="rfloat cms-app-badge txtUpper txtCenter cms-animate strong">
+            <span>Tải App Mới Nhận Mã 20%</span>
+            <span><img src="assets/appicon.png" class="cms-app-icon" ></span>
+        </div>
+
+        <div class="cms-arrow-up" style="display: none;"></div>
+        <div class="cms-app-badge-tt-bg" style="display: none;">
+            <!-- <div class="cms-app-badge-discount-text">
+            Giảm Ngay 15%
+        </div>
+        <div class="cms-app-badge-text">
+            Cho đơn hàng đầu tiên trị giá từ 700k trên APP
+            <br> Dùng Mã: <li class="strong" style="list-style: none;"><a style="color:#f00;">ZLAPP15</a></li>
+        </div>
+        <div class="cms-clear-10"></div>
+        <div class="cms-app-badge-platform-text">
+            Dành riêng cho IOS và Android
+        </div>
+        <div class="cms-clear-4"></div> -->
+            <div class="txtUpper">
+                Hãy tải ứng dụng ROBINS
+            </div>
+            <div class="mts txtUpper">
+                Mua sắm mọi lúc mọi nơi!
+            </div>
+            <div class="small txtUpper mtm mbm">
+                <!-- Dành riêng cho IOS và Android<br> -->
+                Là ứng dụng nổi bật trên Apple Store
+            </div>
+
+            <span><a href="http://apple.co/2pnay1u" target="_blank"><img src="assets/cms-usp-sprite-appstore.png"></a>   <a href="http://bit.ly/2q0JSzJ" target="_blank"><img src="assets/cms-usp-sprite-googleplay.png"></a></span>
+        </div>
+
+    </div>
+    <!-- BANNERS -->
+    <div id="BannersTop" class="hpBannersTop l-pageWrapper box l-clear">
+        <ul class="clearfix">
+            <li class="hpBanner lfloat first last">
+                <div class="js-cmsInspector" data-cmskey="" style="display:inline;">
+                    <link rel="stylesheet" href="assets/onsite.css">
+                    <div class="cms-sb-container">
+
+                        <div id="eg-dsk-homepage-skinny-full"></div>
+                        <!-- EG Global Skinny Full -->
+                        <!-- EG Global Skinny Full -->
+
+
+
+                    </div>
+                    <script>
+                        function fireClickTrackingEvent(eventCategory, eventLabel) {
+                            eventLabel = getCurrentDate() + "|" + eventLabel;
+                            ga("send", "event", eventCategory, "Click", eventLabel);
+                        }
+
+                        function fireImpressionTrackingEvent(eventCategory, eventLabel) {
+                            eventLabel = getCurrentDate() + "|" + eventLabel;
+                            ga("send", "event", eventCategory, "Impression", eventLabel, { "nonInteraction": 1 });
+                        }
+
+                        function appendCSATracker(placement, csaTracker) {
+                            var bannerURL = $("#js-" + placement + "-tracker").attr("href");
+
+                            if (bannerURL.indexOf("?") > -1)
+                                bannerURL = bannerURL + "&csa=" + csaTracker;
+                            else
+                                bannerURL = bannerURL + "?csa=" + csaTracker;
+
+                            $("#js-" + placement + "-tracker").attr("href", bannerURL);
+                        }
+
+                        function automateTracking(placement, eventCategory, eventLabel) {
+                            $("#js-" + placement + "-banner-tracker").load(function () {
+                                fireImpressionTrackingEvent(eventCategory, eventLabel);
+                            });
+
+                            $("#js-" + placement + "-tracker").click(function () {
+                                fireClickTrackingEvent(eventCategory, eventLabel);
+                            });
+                        }
+
+                        function getCurrentDate() {
+                            var today = new Date();
+                            var dd = today.getDate();
+                            var mm = today.getMonth() + 1;
+
+                            var yyyy = today.getFullYear();
+                            if (dd < 10)
+                                dd = '0' + dd;
+
+                            if (mm < 10)
+                                mm = '0' + mm;
+
+                            var today = yyyy + mm + dd;
+                            return today;
+                        }
+                    </script>
+                </div>
+            </li>
+        </ul>
+    </div>
+    <script type="text/template" id="suggested-product-template">
+        <li class="ssg-item" id="ac-<%= index %>">
+            <a title="<%= name %>" href="<%= url %>">
+                <img src="<%= image %>" class="ssg-item__product-image" />
+                <div class="ssg-item__product-info">
+                    <div class="ssg-item__product-name"><%= name %></div>
+                    <div class="ssg-item__product-prices">
+                        <span class="ssg-item__product-price <% if (specialPrice) {%>ssg-item__product-price--old<% } %>">
+                            <%= price %>
+                        </span>
+                        <% if (specialPrice) { %>
+                        <span class="ssg-item__product-price ssg-item__product-price--special">
+                            <%= nowLabel %> <%= specialPrice %>
+                        </span>
+                        <% } %>
+                    </div>
+                </div>
+            </a>
+        </li>
+    </script>
+    <script type="text/template" id="suggested-term-template">
+        <li class="ssg-item <%= className %>" id="ac-<%= index %>">
+            <a title="<%= title %>" href="<%= url %>">
+                <%= keyword %>
+            </a>
+        </li>
+    </script>
+    <script type="text/template" id="suggested-brand-template">
+        <li class="ssg-item <%= className %>" id="ac-<%= index %>">
+            <a title="<%= title %>" href="<%= url %>">
+                <%= keyword %>
+            </a>
+        </li>
+    </script>
+</div>

@@ -1,0 +1,32 @@
+<div id="boxTrackOrder" class="tracking-form modal">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="tracking-form__header modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+                    <i class="icon_close-medium-light"></i>
+                </button>
+                <div class="tracking-form__header--title">Kiểm Tra Đơn Hàng Của Bạn</div>
+            </div>
+            <div class="tracking-form__body modal-body">
+                <div class="tracking-form__body--error">
+                    <div id="orderAjaxMessage" class="box mts msgBox nl_inline_notification pas s-error">
+                    </div>
+                </div>
+                <form class="orderTrackerForm" action="https://www.robins.vn/ordertracker/validate/" method="post" autocapitalize="off" autocorrect="off">
+                    <input type="hidden" value="a7e5ec3ed1d15b2da8bf8bd4f29d7f5b904ad8f0" name="YII_CSRF_TOKEN">
+                    <div class="ui-formRow mtm mbn">
+                        <div class="tracking-form__body--title">Mã Đơn Hàng</div>
+                        <div>
+                            <input class="ui-inputText mbm bottom-newsletter-input" placeholder="Mã Đơn Hàng" required="required" name="trackOrder[orderId]"
+                                data-errormessage-value-missing="Xin vui lòng nhập thông tin này" value="" id="trackOrder_orderId"
+                                type="text"> </div>
+                    </div>
+
+                    <div class="mtm mbs tracking-form__body--submit">
+                        <button id="buttonViewOrderStatus" type="submit" class="btn btn--fluid">Xem tình trạng đơn hàng</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

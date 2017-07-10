@@ -1,0 +1,279 @@
+<!--<script>
+        document.body.className = document.body.className.replace('no-js', 'js');
+    </script>-->
+<!--<script type="application/ld+json">
+        {
+  "@context" : "http://schema.org",
+  "@type" : "Organization",
+  "Name" : "ZALORA Việt Nam",
+  "url" : "https://www.zalora.vn/",
+  "contactPoint" : [{
+  "@type" : "ContactPoint",
+  "telephone" : "+8419001008",
+  "contactType" : "customer service"
+}],
+  "logo": "https://static-vn.zacdn.com/cms/images/zaloravn_logo_1191x844.png",
+  "sameAs" : [
+    "https://www.facebook.com/ZaloraVietnam/",
+    "https://www.instagram.com/zaloravietnam/",
+    "https://www.youtube.com/user/zaloravietnam",
+    "https://plus.google.com/+zaloravn",
+    "https://twitter.com/zaloravietnam",
+    "http://chats.viber.com/zaloravietnamchat",
+    "https://www.pinterest.com/zaloravietnam/"
+  ]
+}
+    </script>-->
+<script>
+    (function (w, d, s, l, i) {
+        w[l] = w[l] || [];
+        w[l].push({ 'gtm.start': new Date().getTime(), event: 'gtm.js' });
+        var f = d.getElementsByTagName(s)[0], j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : '';
+        j.async = true; j.src = 'http://www.googletagmanager.com/gtm.js?id=' + i + dl;
+        f.parentNode.insertBefore(j, f);
+    })(window, document, 'script', 'dataLayer', 'GTM-TZCX');
+
+</script>
+<!-- Google Tag Manager End -->
+
+<div id="page" class="l-page">
+    <mol-header></mol-header>
+    <!--NEWSLETTER POPUP-->
+
+    <mol-sticky-bottom></mol-sticky-bottom>
+
+    <!--WALLET POPUP-->
+
+    <!--USP BLOCKS-->
+    <mol-bottom-header></mol-bottom-header>
+    <mol-main-content></mol-main-content>
+    <mol-footer></mol-footer>
+    <mol-box-track-order></mol-box-track-order>
+    <div id="boxResultTrackOrder" class="modal"></div>
+</div>
+<!-- TRACKING V2 END  -->
+<div id="message-popup">
+    <div class="content">
+        <div class="js-message popup-message">
+        </div>
+        <div class="action">
+            <button class="js-popup-button btn btn--special"></button>
+        </div>
+    </div>
+</div>
+<div id="fb-root" class=" fb_reset">
+    <div style="position: absolute; top: -10000px; height: 0px; width: 0px;">
+        <div></div>
+    </div>
+    <div style="position: absolute; top: -10000px; height: 0px; width: 0px;">
+        <div>
+
+        </div>
+    </div>
+</div>
+<div id="criteo-tags-div" style="display: none;">
+    <iframe height="0" width="0" src="assets/dis.html" style="display: none;"></iframe>
+</div>
+<div class="eg-WindowBlurTrigger" style="position: absolute; height: 1px; width: 1px; left: -99999px; overflow: hidden;"></div>
+<iframe src="assets/tags.html" width="1" height="1" scrolling="no" frameborder="0" style="display:none"></iframe>
+<script src="assets/alice-vnfas-core-v12555be075c5.js.tải xuống" type="text/javascript"></script>
+<script src="assets/alice-vnfas-home-vcd5b963b0247.js.tải xuống" type="text/javascript"></script>
+<script>
+    var preload;
+
+    // if (/*@cc_on!@*/false) { // IE sniffing with conditional comments
+    //     preload = function (file) {
+    //         new Image().src = file;
+    //     };
+    // } else {
+    preload = function (file) {
+        var obj = document.createElement('object'),
+            body = document.body;
+
+        obj.height = 0;
+        obj.data = file;
+        body.appendChild(obj);
+    };
+    // }
+    function require(file, callback) {
+        var script = document.getElementsByTagName('script')[0],
+            newjs = document.createElement('script');
+        // IE
+        newjs.onreadystatechange = function () {
+            if (newjs.readyState === 'loaded' || newjs.readyState === 'complete') {
+                newjs.onreadystatechange = null;
+                callback();
+            }
+        };
+        // others
+        newjs.onload = function () {
+            callback();
+        };
+        newjs.src = file;
+        script.parentNode.insertBefore(newjs, script);
+    }
+    var homepage = homepage || {};
+
+    homepage.detectAdblock = function () {
+        if ($('#advertisment').height() == 0) {
+            $.ajax({
+                "url": '/data/getcms/',
+                "data": { 'route': window.location.pathname, 'names': ['carousel'] },
+                "type": 'post',
+                "dataType": 'json',
+                "cache": false,
+                "success": function (data, status, jqXHR) {
+
+                    $('#index-main-slideshow').html(data.result['slideShow']);
+                    $('#index-right-banners').html(data.result['rightBanner']).fadeIn(500);
+                    $('#index-teaser-banners').html(data.result['banner']).fadeIn(500);
+
+                    // dont use a cached selector as it is not available in DOM yet
+                    require('https://static-cf-vn.thezalora.space/js/local/DFA/latest/dfa_carousel.js', function () {
+                        $('#index-main-slideshow').fadeIn(500);
+                        if ($('.b-mainBanner__slideshow .hpSlideshowSlides').length > 0
+                            && typeof $('.b-mainBanner__slideshow .hpSlideshowSlides').cycle !== 'undefined') {
+                            $('.b-mainBanner__slideshow .hpSlideshowSlides').cycle({
+                                fx: 'fade',
+                                speed: 'slow',
+                                timeout: 5000,
+                                prev: '.hpSlideshow .hpSlideshowControls .ui-buttonPrevSlide',
+                                next: '.hpSlideshow .hpSlideshowControls .ui-buttonNextSlide',
+                                pager: '#Slideshow_numbers'
+                            });
+                        }
+                    }); // end of require
+                }
+
+            });
+        }
+    };
+
+</script>
+<script>
+    if (typeof homepage !== 'undefined' && typeof homepage.initialize !== 'undefined') {
+        $(function () {
+            homepage.initialize(window.store);
+        });
+    }
+
+</script>
+<script type="text/javascript">
+    $(document).ready(function () {
+        Zalora.Header.HeaderController.init({ "language": "vi", "countryIso": "VN", "currentPageType": "mainshop", "firstName": null, "lastName": null, "walletBalance": null, "wishlistCount": null, "cartCount": 0, "currentCatalog": null, "currentSegment": null, "cmsLogo": { "flag": false } });
+
+        $("li a.social-sharing").click(function () {
+            var $this = $(this), $window = $(window),
+                targetUrl = $this.attr("href"),
+                network = $this.data('networkid');
+            label = $this.data('href');
+
+            if (typeof utag_data != 'undefined' && typeof (utag_data.Product_SKU) != 'undefined'
+                && utag_data.Product_SKU != '') {
+                label = utag_data.Product_SKU;
+            }
+
+            if (typeof (ga) != 'undefined') {
+                switch (network) {
+                    case 'twitter':
+                        ga('send', 'event', 'twitter', 'tweet', label);
+                        break;
+                    case 'googleplus':
+                        ga('send', 'event', 'googleplus', 'plusone', label);
+                        break;
+                }
+            }
+            windowWidth = $window.width();
+            windowHeight = $window.height();
+            alignLeft = (windowWidth - 500) / 2;
+            alignTop = (windowHeight - 300) / 2;
+            window.open(targetUrl, 'social-network-window', 'height=300,width=500,scrollbars=1,left=' + alignLeft + ',top=' + alignTop);
+            return false;
+        });
+
+
+        if (typeof (Zalora) !== 'undefined' && typeof (Zalora.AbandonedFormTracking) !== 'undefined') {
+            Zalora.AbandonedFormTracking.initialize();
+        }
+    });
+
+</script>
+<script type="text/javascript">
+    var expiration = new Date();
+    var minutes = 30;
+    expiration.setTime(expiration.getTime() + 1800000);
+
+    document.cookie = 'sessionCount' + '=' + '1' +
+        '; path=/; secure; domain=' + '.robins.vn';
+    document.cookie = 'pageCount' + '=' + '7' +
+        '; expires=' + expiration.toUTCString() + '; path=/; secure; domain=' + '.robins.vn';
+
+</script>
+<script type="text/javascript">
+    (function (window) {
+        var Zalora = window.Zalora || {};
+        Zalora.jsStore = Zalora.jsStore || {};
+        Zalora.jsStore["country_iso"] = "VN";
+        Zalora.jsStore["catalogsorting_tracking"] = 0;
+        Zalora.jsStore["pixel_beacon_path"] = "http://pixel.graphite.zalora.com/pixel.gif";
+        Zalora.jsStore["pixel_ns"] = "vnfas.live.alice.tracking.";
+        Zalora.jsStore["costa_search_suggest_api_version_2"] = 1;
+        Zalora.jsStore["costa_spell_check"] = 1;
+        Zalora.jsStore["costa_spell_check_with_suggestion"] = 1;
+        Zalora.jsStore["catalogtype"] = "Main";
+        Zalora.jsStore["currency_format"] = "<span><%=meta.price%> VNĐ</span>";
+        Zalora.jsStore["search_suggestion_label"] = "Gợi ý tìm kiếm";
+        Zalora.jsStore["product_suggestion_label"] = "Sản phẩm gợi ý";
+        Zalora.jsStore["now_label"] = "GIẢM CÒN";
+        Zalora.jsStore["in_label"] = "trong";
+        Zalora.jsStore["shoptype"] = 1;
+        Zalora.jsStore["use_search_throttle"] = 1;
+        Zalora.jsStore["search_throttle_value"] = 300;
+        Zalora.jsStore["customer_email"] = "";
+        Zalora.jsStore["customer_id"] = "";
+        Zalora.jsStore["customer_name"] = "";
+        Zalora.jsStore["leadtime_feature_enabled"] = 0;
+        Zalora.jsStore["abandoned_form_tracking_enabled"] = 1;
+        Zalora.jsStore["cdn_url"] = "https://static-cf-vn.thezalora.space";
+        Zalora.jsStore["isSegmentpage"] = 1;
+        Zalora.jsStore["isIndexPage"] = 1;
+        Zalora.jsStore["popupSubscription"] = { "showSubscription": true, "delay": "10", "cookie": { "name": "popUpSubscribe", "value": "subscribeModal", "expire": 180 } };
+        Zalora.jsStore["newsletter_link"] = "<a class=\'closePopup\'>Click here</a> to continue shopping.";
+        Zalora.jsStore["env"] = "live";
+        window.Zalora = Zalora;
+        window.store = Zalora.jsStore;
+    })(window);
+
+</script>
+<script type="text/javascript" id="">
+    var google_tag_params = { prodid: "undefined", pagetype: "homepage", pcat: "" };
+
+</script>
+
+<noscript>&lt;img height="1" width="1" alt="" style="display:none" src="https://www.facebook.com/tr?id=329322960817329&amp;amp;ev=PageView&amp;amp;noscript=1"&gt;
+</noscript>
+
+
+
+<script type="text/javascript" id="" src="assets/robins.vn.js.tải xuống"></script>
+<script type="text/javascript" id="">
+    setTimeout(function () {
+        if ("object" == typeof Zopim) {
+            var f = function () { Zopim.init("2CDfHljWVNozR3RUMyoJXXmgwl18xdSU", ".zalora.vn"); $zopim.livechat.setOnStatus(function (c) { Zopim.status = c }); setTimeout(function () { "online" == Zopim.status && $zopim.livechat.button.show() }, 1E3) }; (function (c, d) {
+                var b = this.zopim = function (a) { b._.push(a) }, a = b.s = c.createElement(d), e = c.getElementsByTagName(d)[0]; b.set = function (a) { b.set._.push(a) }; b._ = []; b.set._ = []; a.async = !0; a.setAttribute("charset", "utf-8"); a.src = "http://v2.zopim.com/?2CDfHljWVNozR3RUMyoJXXmgwl18xdSU";
+                b.t = +new Date; a.type = "text/javascript"; e.parentNode.insertBefore(a, e); a.onload = f
+            })(document, "script")
+        }
+    }, 6E4);
+
+</script>
+<iframe src="assets/pixel.html" style="display: none;"></iframe>
+<script type="text/javascript" id="">
+    var device; device = "Mobile" == google_tag_manager["GTM-TZCX"].macro('gtm14') || "Tablet" == google_tag_manager["GTM-TZCX"].macro('gtm15') ? "m" : "d"; window.criteo_q = window.criteo_q || []; window.criteo_q.push({ event: "setAccount", account: 5839 }, { event: "setCustomerId", id: "" }, { event: "setSiteType", type: device }, { event: "viewHome" }, { event: "viewHome", user_segment: "4", marked_user: 1 }, { event: "setHashedEmail", email: "" });
+
+</script>
+
+<script type="text/javascript" id="">
+    (function () { mailrecipe.update({ userId: google_tag_manager["GTM-TZCX"].macro('gtm32') }) })();
+
+</script>
