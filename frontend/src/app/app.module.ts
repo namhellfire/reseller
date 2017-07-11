@@ -9,6 +9,7 @@ import {MolFooterComponent} from './modules/mol-footer/mol-footer.component';
 import {  MolMainContentComponent} from "./modules/mol-main-content/mol-main-content.component";
 import { MolBoxTrackOrderComponent } from "./modules/mol-box-track-order/mol-box-track-order.component";
 import { MolMainAuthenComponent } from "./modules/mol-main-authen/mol-main-authen.component";
+import {MolListProductComponent  } from "./modules/mol-list-product/mol-list-product.component";
 // pages
 import {IndexComponent} from './pages/index/index.component'
 import { AuthenComponent } from "./pages/authen/authen.component";
@@ -19,7 +20,7 @@ import { AuthenComponent } from "./pages/authen/authen.component";
     AppComponent, MolHeaderComponent, MolStickyBottomComponent,
     MolBottomHeaderComponent,MolFooterComponent,
     MolMainContentComponent,MolBoxTrackOrderComponent,MolMainAuthenComponent,
-
+  
     // pages
     IndexComponent, AuthenComponent
   ],
