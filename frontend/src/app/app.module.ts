@@ -11,7 +11,7 @@ import { MolBoxTrackOrderComponent } from "./modules/mol-box-track-order/mol-box
 import { MolMainAuthenComponent } from "./modules/mol-main-authen/mol-main-authen.component";
 import {MolListProductComponent  } from "./modules/mol-list-product/mol-list-product.component";
 // pages
-import {IndexComponent} from './pages/index/index.component'
+import {HomeComponent} from './pages/home/home.component'
 import { AuthenComponent } from "./pages/authen/authen.component";
 
 @NgModule({
@@ -22,7 +22,7 @@ import { AuthenComponent } from "./pages/authen/authen.component";
     MolMainContentComponent,MolBoxTrackOrderComponent,MolMainAuthenComponent,
   
     // pages
-    IndexComponent, AuthenComponent
+    HomeComponent, AuthenComponent
   ],
   imports: [
     BrowserModule
