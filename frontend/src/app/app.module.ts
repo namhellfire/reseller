@@ -8,19 +8,20 @@ import {MolBottomHeaderComponent} from './modules/mol-bottom-header/mol-bottom-h
 import {MolFooterComponent} from './modules/mol-footer/mol-footer.component';
 import {  MolMainContentComponent} from "./modules/mol-main-content/mol-main-content.component";
 import { MolBoxTrackOrderComponent } from "./modules/mol-box-track-order/mol-box-track-order.component";
-
+import { MolMainAuthenComponent } from "./modules/mol-main-authen/mol-main-authen.component";
 // pages
-import {IndexComponent} from './pages/index.component'
+import {IndexComponent} from './pages/index/index.component'
+import { AuthenComponent } from "./pages/authen/authen.component";
 
 @NgModule({
   declarations: [
     //components
     AppComponent, MolHeaderComponent, MolStickyBottomComponent,
     MolBottomHeaderComponent,MolFooterComponent,
-    MolMainContentComponent,MolBoxTrackOrderComponent,
+    MolMainContentComponent,MolBoxTrackOrderComponent,MolMainAuthenComponent,
 
     // pages
-    IndexComponent,
+    IndexComponent, AuthenComponent
   ],
   imports: [
     BrowserModule
