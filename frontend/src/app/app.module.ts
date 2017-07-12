@@ -21,6 +21,10 @@ import { HomeComponent } from './pages/home/home.component'
 import { AuthenComponent } from "./pages/authen/authen.component";
 import { ListProductPageComponent } from "./pages/list-product-page/list-product-page.component";
 
+
+// routing
+import { routedComponents } from './routing'
+
 @NgModule({
   declarations: [
     //components
@@ -37,7 +41,7 @@ import { ListProductPageComponent } from "./pages/list-product-page/list-product
     HomeComponent, AuthenComponent,ListProductPageComponent,
   ],
   imports: [
-    BrowserModule
+    BrowserModule,routedComponents
   ],
   providers: [],
   bootstrap: [AppComponent,

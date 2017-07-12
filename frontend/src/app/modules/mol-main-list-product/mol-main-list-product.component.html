@@ -49,9 +49,7 @@
     </div>
     <section _ngcontent-c3="" class="catalog-box">
         <ul _ngcontent-c3="" class="b-catalogList__wrapper clearfix" id="productsCatalog">
-            <div *ngFor="let item of listProduct">
-                <mol-single-product></mol-single-product>
-            </div>
+            <mol-single-product [product]="item" *ngFor="let item of listProduct"></mol-single-product>
         </ul>
         <div _ngcontent-c3="" class="js-streamingLoading b-catalogStreamingLoading b-catalogList" style="display: none;">
             <div _ngcontent-c3="" class="b-catalogAjaxLoading"></div>

@@ -1,48 +1,37 @@
-<div _ngcontent-c3="" class="b-catalogList__itm js-catalogList__itm hasOverlay unit size1of3">
-    <li _ngcontent-c3="" class="b-catalogList__itm js-catalogList__itm hasOverlay unit size1of3" id="GR210AA24DULVN">
-        <span _ngcontent-c3="" class="js-catalogList__itmHead"></span>
-        <div _ngcontent-c3="" class="b-catalogList__itmOverlay narrow">
+<div class="b-catalogList__itm js-catalogList__itm hasOverlay unit size1of3">
+    <li class="b-catalogList__itm js-catalogList__itm hasOverlay unit size1of3" id="GR210AA24DULVN">
+        <span class="js-catalogList__itmHead"></span>
+        <div class="b-catalogList__itmOverlay narrow">
         </div>
-        <a _ngcontent-c3="" class="b-catalogList__itmLink itm-link" href="https://www.robins.vn/gracy-design-vay-ren-hong-co-tim-h%E1%BB%93ng-723175.html">
-     
-        <span _ngcontent-c3="" class="b-catalogList__itmImageWrapper js-catalogImage js-itm-hover" data-index="1" data-sku="GR210AA24DULVN" style="height: 345px;">
-            <img _ngcontent-c3="" alt="Gracy Design hồng Váy Ren Hồng Cổ Tim GR210AA24DULVN_1" class="b-catalogList__itm-img js-itm-img js-itm-hover-img-front" data-src="" height="345" src="assets/gracy-design-2629-571327-1.jpg" style="opacity: 1;" title="Váy Ren Hồng Cổ Tim from Gracy Design in hồng_1" width="236">
-            <img _ngcontent-c3="" class="b-catalogList__itm-img-hover js-itm-hover-img-back" data-src="" height="345" src="assets/gracy-design-2631-571327-4.jpg" width="236">
-     </span>
-            <span _ngcontent-c3="" class="b-catalogList__itmSaleFlagPercent">23% OFF</span>
-            <span _ngcontent-c3="" class="b-catalogList__itmNewFlag"></span>
-        <span _ngcontent-c3="" class="js-catalogList__itmTail"></span>
-        <span _ngcontent-c3="" class="b-catalogList__itmBrand fsm txtDark uc js-catalogProductTitle">Gracy Design</span>
-        <em _ngcontent-c3="" class="b-catalogList__itmTitle fss">
+        <a class="b-catalogList__itmLink itm-link" href="{{product.refUrl}}">     
+        <span class="b-catalogList__itmImageWrapper js-catalogImage js-itm-hover" data-index="1" data-sku="GR210AA24DULVN" style="height: 345px;">
+            <img alt="{{product.title}}" class="b-catalogList__itm-img js-itm-img js-itm-hover-img-front" data-src="" height="345" src="{{product.imgUrl}}" style="opacity: 1;" title="product.title" width="236">
+            <img class="b-catalogList__itm-img-hover js-itm-hover-img-back" data-src="" height="345" src="{{product.imgUrl}}" width="236">
+        </span>
+            <span class="b-catalogList__itmSaleFlagPercent">{{product.discount}}% OFF</span>
+            <span class="b-catalogList__itmNewFlag"></span>
+        <span class="js-catalogList__itmTail"></span>
+        <span class="b-catalogList__itmBrand fsm txtDark uc js-catalogProductTitle">Gracy Design</span>
+        <em class="b-catalogList__itmTitle fss">
             Váy Ren Hồng Cổ Tim
         </em>
-        <span _ngcontent-c3="" class="b-catalogList__itmPriceBox itm-priceBox fsm txtDark">
-            
-                
-                    <span _ngcontent-c3="" class="b-catalogList__itmPrice old">
-                    <span _ngcontent-c3="">1.490.000 VNĐ</span>                    </span>            
-                
-                <span _ngcontent-c3="" class="b-catalogList__itmPrice special">
-                    <span _ngcontent-c3="" class="txtUpper">
+        <span class="b-catalogList__itmPriceBox itm-priceBox fsm txtDark">
+                    <span class="b-catalogList__itmPrice old">
+                    <span >{{product.price | currency:'VND':true}}</span></span>                            
+                <span class="b-catalogList__itmPrice special">
+                    <span class="txtUpper">
                         GIẢM CÒN
                     </span>
-                    <span _ngcontent-c3=""><span _ngcontent-c3="">1.150.000 VNĐ</span>                    </span>
+                    <span><span>{{product.price - (product.price*product.discount)/100 | currency:'VND':true}}</span></span>
                 </span>    
                                 
         </span>
-        <span _ngcontent-c3="" class="b-catalogList__itmAvailableSizes" id="size_GR210AA24DULVN">
-            
-               <span _ngcontent-c3="" class="b-catalogList__itmSizeLabel">Kích cỡ</span>
-               
-               <span _ngcontent-c3="" class="individual-size" id="size_GR210AA24DULVN_XS" size="XS" url="gracy-design-vay-ren-hong-co-tim-h%E1%BB%93ng-723175.html">XS</span>
-               
-               <span _ngcontent-c3="" class="individual-size" id="size_GR210AA24DULVN_S" size="S" url="gracy-design-vay-ren-hong-co-tim-h%E1%BB%93ng-723175.html">S</span>
-               
-               <span _ngcontent-c3="" class="individual-size" id="size_GR210AA24DULVN_M" size="M" url="gracy-design-vay-ren-hong-co-tim-h%E1%BB%93ng-723175.html">M</span>
-               
-               <span _ngcontent-c3="" class="individual-size" id="size_GR210AA24DULVN_L" size="L" url="gracy-design-vay-ren-hong-co-tim-h%E1%BB%93ng-723175.html">L</span>
-               
-           
+        <span class="b-catalogList__itmAvailableSizes" id="size_GR210AA24DULVN">
+               <span class="b-catalogList__itmSizeLabel">Kích cỡ</span>
+               <span class="individual-size" id="{{product.size[0].id}}" size="" url="">{{product.size[0].name}}</span>
+               <span class="individual-size" id="{{product.size[1].id}}" size="" url="">{{product.size[1].name}}</span>
+               <span class="individual-size" id="{{product.size[2].id}}" size="" url="">{{product.size[2].name}}</span>
+               <span class="individual-size" id="{{product.size[3].id}}" size="" url="">{{product.size[3].name}}</span>
         </span>
     </a>
     </li>

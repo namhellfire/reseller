@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit,Input  } from '@angular/core';
+import { Product } from "../../models/Product";
 
 @Component({
     selector: 'mol-single-product',
@@ -6,7 +7,10 @@ import { Component, OnInit } from '@angular/core';
 })
 
 export class MolSingleProductComponent implements OnInit {
-    constructor() { }
+    @Input() product : Product;
+    constructor() { 
+        console.log(this.product);
+    }
 
     ngOnInit() { }
 }
