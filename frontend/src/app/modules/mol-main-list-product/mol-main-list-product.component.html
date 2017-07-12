@@ -1,0 +1,103 @@
+<div _ngcontent-c3="" class="b-catalogList__container pal box box-bgcolor" id="catalog_container">
+    <div _ngcontent-c3="" class="box b-catalogList__paging mbl">
+        <div _ngcontent-c3="" class="pgn-body-top pls ptm">
+            <div _ngcontent-c3="" class="paging l-row">
+                <div _ngcontent-c3="" class="l-cell vMid pgn-sortWrapper">
+                    <label _ngcontent-c3="" class="inline b-catalogList__sortLabel" for="sortOrder">Sắp xếp theo</label>
+                    <select _ngcontent-c3="" class="sorting b-catalogList__sortSelect">
+                            <option _ngcontent-c3="" selected="selected" value="popularity">Sản phẩm ưa chuộng</option><option _ngcontent-c3="" value="lowest_price">Giá thấp đến cao</option><option _ngcontent-c3="" value="highest_price">Giá cao đến thấp</option><option _ngcontent-c3="" value="latest arrival">Mới nhất</option><option _ngcontent-c3="" value="discount">Giảm giá</option>                            </select>
+                </div>
+                <div _ngcontent-c3="" class="l-cell vMid txtRight" id="topPagination">
+                    <div _ngcontent-c3="">
+                        <ul _ngcontent-c3="" class="ui-listHorizontal pgn">
+                            <li _ngcontent-c3="" class="ui-listItem">
+
+                            </li>
+                            <li _ngcontent-c3="" class="ui-listItem">
+
+                                <a _ngcontent-c3="" class="page-item js-page-item selected" data-target="1" href="https://www.robins.vn/women/new-products/?from=header&amp;page=1"
+                                    rel="follow">1</a>
+
+                                <a _ngcontent-c3="" class="page-item js-page-item" data-target="2" href="https://www.robins.vn/women/new-products/?from=header&amp;page=2"
+                                    rel="follow">2</a>
+
+                                <a _ngcontent-c3="" class="page-item js-page-item" data-target="3" href="https://www.robins.vn/women/new-products/?from=header&amp;page=3"
+                                    rel="follow">3</a>
+
+                                <a _ngcontent-c3="" class="page-item js-page-item" data-target="4" href="https://www.robins.vn/women/new-products/?from=header&amp;page=4"
+                                    rel="follow">4</a>
+
+                                <a _ngcontent-c3="" class="page-item js-page-item" data-target="5" href="https://www.robins.vn/women/new-products/?from=header&amp;page=5"
+                                    rel="follow">5</a>
+
+                            </li>
+
+                            <li _ngcontent-c3="" class="ui-listItem paging-next">
+                                <a _ngcontent-c3="" class="page-item js-page-item" data-target="2" href="https://www.robins.vn/women/new-products/?from=header&amp;page=2"
+                                    rel="follow" title="Tiếp theo">&gt;</a>
+                            </li>
+
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div _ngcontent-c3="" class="l-row pls selected-filters" id="selected-filters" style="display: none;">
+            <div _ngcontent-c3="" class="l-cell selected-filter-caption">Đã chọn</div>
+            <ul _ngcontent-c3="" class="ui-listHorizontal" id="chosen-filters"></ul>
+        </div>
+    </div>
+    <section _ngcontent-c3="" class="catalog-box">
+        <ul _ngcontent-c3="" class="b-catalogList__wrapper clearfix" id="productsCatalog">
+            <div *ngFor="let item of listProduct">
+                <mol-single-product></mol-single-product>
+            </div>
+        </ul>
+        <div _ngcontent-c3="" class="js-streamingLoading b-catalogStreamingLoading b-catalogList" style="display: none;">
+            <div _ngcontent-c3="" class="b-catalogAjaxLoading"></div>
+        </div>
+    </section>
+    <div _ngcontent-c3="" class="paging">
+        <div _ngcontent-c3="" class="pgn-body-top pls ptm">
+            <div _ngcontent-c3="" class="paging l-row">
+                <div _ngcontent-c3="" class="l-cell vMid pgn-sortWrapper">
+                    <label _ngcontent-c3="" class="inline b-catalogList__sortLabel" for="sortOrder">Sắp xếp theo</label>
+                    <select _ngcontent-c3="" class="sorting b-catalogList__sortSelect">
+                            <option _ngcontent-c3="" selected="selected" value="popularity">Sản phẩm ưa chuộng</option><option _ngcontent-c3="" value="lowest_price">Giá thấp đến cao</option><option _ngcontent-c3="" value="highest_price">Giá cao đến thấp</option><option _ngcontent-c3="" value="latest arrival">Mới nhất</option><option _ngcontent-c3="" value="discount">Giảm giá</option>                            </select>
+                </div>
+                <div _ngcontent-c3="" class="l-cell vMid txtRight" id="bottomPagination">
+                    <div _ngcontent-c3="">
+                        <ul _ngcontent-c3="" class="ui-listHorizontal pgn">
+                            <li _ngcontent-c3="" class="ui-listItem">
+
+                            </li>
+                            <li _ngcontent-c3="" class="ui-listItem">
+
+                                <a _ngcontent-c3="" class="page-item js-page-item selected" data-target="1" href="https://www.robins.vn/women/new-products/?from=header&amp;page=1"
+                                    rel="follow">1</a>
+
+                                <a _ngcontent-c3="" class="page-item js-page-item" data-target="2" href="https://www.robins.vn/women/new-products/?from=header&amp;page=2"
+                                    rel="follow">2</a>
+
+                                <a _ngcontent-c3="" class="page-item js-page-item" data-target="3" href="https://www.robins.vn/women/new-products/?from=header&amp;page=3"
+                                    rel="follow">3</a>
+
+                                <a _ngcontent-c3="" class="page-item js-page-item" data-target="4" href="https://www.robins.vn/women/new-products/?from=header&amp;page=4"
+                                    rel="follow">4</a>
+
+                                <a _ngcontent-c3="" class="page-item js-page-item" data-target="5" href="https://www.robins.vn/women/new-products/?from=header&amp;page=5"
+                                    rel="follow">5</a>
+
+                            </li>
+
+                            <li _ngcontent-c3="" class="ui-listItem paging-next">
+                                <a _ngcontent-c3="" class="page-item js-page-item" data-target="2" href="https://www.robins.vn/women/new-products/?from=header&amp;page=2"
+                                    rel="follow" title="Tiếp theo">&gt;</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
