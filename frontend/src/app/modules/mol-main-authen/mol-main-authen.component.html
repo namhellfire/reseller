@@ -1,68 +1,65 @@
 <link rel="stylesheet" type="text/css" href="assets/alice-vnfas-core-vfa04a7af27a9.css" media="all">
-    <div role="main" id="content">
-        <div class="l-pageWrapper">
-            <div class="l-main">
-                <div id="login" class="line mbm box-bgcolor">
-                    <div class="unit size1of2 b-LoginContainer">
-                        <div class="box ">
-                            <div class="mbm pal txtUpper login__title fsml">
-                                TÔI ĐÃ ĐĂNG KÝ TÀI KHOẢN </div>
-                            <div class="login__form">
-                                <form id="form-account-login" action="https://www.robins.vn/customer/account/login/?from=header" method="post" autocapitalize="off"
-                                    autocorrect="off">
-                                    <input type="hidden" value="bfac8938826f52a68c774ef13b1ea0afb64c522b" name="YII_CSRF_TOKEN">
-                                    <div class="clearfix loginForm">
-                                        <fieldset class="ui-fieldset">
-                                            <div class="ui-formRow mts mbn">
-                                                <label class="mts col1 required" for="LoginForm_email">Địa chỉ email <span class="required">*</span></label>                                                <input class="ui-inputText" name="LoginForm[email]" id="LoginForm_email"
-                                                    type="text"> </div>
-                                            <div class="ui-formRow mtm mbn">
-                                                <label class="mts col1 required" for="LoginForm_password">Mật khẩu <span class="required">*</span></label>                                                <input class="ui-inputPassword" name="LoginForm[password]" id="LoginForm_password"
-                                                    type="password"> <a class="mts ui-inlineBlock colorRow fss mtm mbml" href="https://www.robins.vn/customer/account/forgotpassword/">Quên mật khẩu?                                        </a>
+<div role="main" id="content">
+    <div class="l-pageWrapper">
+        <div class="l-main">
+            <div id="login" class="line mbm box-bgcolor">
+                <div class="unit size1of2 b-LoginContainer">
+                    <div class="box ">
+                        <div class="mbm pal txtUpper login__title fsml">
+                            TÔI ĐÃ ĐĂNG KÝ TÀI KHOẢN </div>
+                        <div class="login_form">
+                            <form id="form-account-login" class="form-group" #loginForm="ngForm">
+                                <input type="hidden" value="bfac8938826f52a68c774ef13b1ea0afb64c522b" name="YII_CSRF_TOKEN">
+                                <div class="clearfix loginForm">
+                                    <fieldset class="ui-fieldset">
+                                        <div class="ui-formRow mts mbn">
+                                            <label class="mts col1 required" for="LoginForm_email">Địa chỉ email <span class="required">*</span></label>
+                                            <input class="form-control" [(ngModel)]="user.email" name="email" id="LoginForm_email" type="text" required>                                            </div>
+                                        <div class="ui-formRow mtm mbn">
+                                            <label class="mts col1 required" for="LoginForm_password">Mật khẩu <span class="required">*</span></label>
+                                            <input class="form-control" [(ngModel)]="user.password" name="password" id="LoginForm_password" type="password" required>                                            <a class="mts ui-inlineBlock colorRow fss mtm mbml" href="https://www.robins.vn/customer/account/forgotpassword/">Quên mật khẩu?                                        </a>
+                                        </div>
+                                        <div class="ui-formRow mts mbn">
+                                            <div class="mtm unit lfloat txtLight fss">
+                                                <!-- SEAFAS-7038 migration -->
+                                                <div class="unit">
+                                                    <input id="ytLoginForm_stayLogged" type="hidden" value="0" name="LoginForm[stayLogged]">
+                                                    <input checked="checked" name="LoginForm[stayLogged]" id="LoginForm_stayLogged" value="1" type="checkbox">                                                    </div>
+                                                <div class="unit mls">
+                                                    <label class="staylogged" for="LoginForm_stayLogged">Giữ trạng thái đăng nhập</label>                                                    </div>
                                             </div>
-                                            <div class="ui-formRow mts mbn">
-                                                <div class="mtm unit lfloat txtLight fss">
-                                                    <!-- SEAFAS-7038 migration -->
-                                                    <div class="unit">
-                                                        <input id="ytLoginForm_stayLogged" type="hidden" value="0" name="LoginForm[stayLogged]">
-                                                        <input checked="checked" name="LoginForm[stayLogged]" id="LoginForm_stayLogged" value="1" type="checkbox">                                                        </div>
-                                                    <div class="unit mls">
-                                                        <label class="staylogged" for="LoginForm_stayLogged">Giữ trạng thái đăng nhập</label>                                                        </div>
-                                                </div>
-                                                <div class="unitRight rfloat">
-                                                    <button class="btn btn-dark login__button" type="submit">
-                                                    Đăng nhập                                                </button>
-                                                </div>
+                                            <div class="unitRight rfloat">
+                                                <button class="btn btn-dark login__button" type="submit" (click)="onCredential()" >Đăng nhập</button>
                                             </div>
-                                        </fieldset>
-                                    </div>
-                                </form>
-                            </div>
+                                        </div>
+                                    </fieldset>
+                                </div>
+                            </form>
                         </div>
                     </div>
-                    <!-- SEAFAS-7038 migration -->
-                    <div class="unit size1of2 lastUnit login__registerBox">
-                        <div class="box myaccountLogin">
-                            <div class="login__registerNewAccount txtUpper">
-                                <div class="fsml pbl">Bạn là khách hàng mới?</div>
-                                <div class="box ptl">
-                                    <a class="btn btn-dark login__createAccountBtn sel-new-account-create-button" href="https://www.robins.vn/customer/account/create"
-                                        title="Đăng ký">Đăng ký                            </a>
-                                </div>
+                </div>
+                <!-- SEAFAS-7038 migration -->
+                <div class="unit size1of2 lastUnit login__registerBox">
+                    <div class="box myaccountLogin">
+                        <div class="login__registerNewAccount txtUpper">
+                            <div class="fsml pbl">Bạn là khách hàng mới?</div>
+                            <div class="box ptl">
+                                <a class="btn btn-dark login__createAccountBtn sel-new-account-create-button" href="https://www.robins.vn/customer/account/create"
+                                    title="Đăng ký">Đăng ký                            </a>
                             </div>
+                        </div>
 
-                            <div class="fbLoginContainer">
-                                <div>
-                                    <div class="fbCreatePageLabel">
-                                        Đăng nhập thuận tiện bằng tài khoản Facebook </div>
-                                    <div class="fbLoginButton">
-                                        <a class="btn btn--facebook" href="https://www.robins.vn/customer/socialconnect/login?sconn=facebook">
+                        <div class="fbLoginContainer">
+                            <div>
+                                <div class="fbCreatePageLabel">
+                                    Đăng nhập thuận tiện bằng tài khoản Facebook </div>
+                                <div class="fbLoginButton">
+                                    <a class="btn btn--facebook" href="https://www.robins.vn/customer/socialconnect/login?sconn=facebook">
                 Sign in with facebook
             </a>
-                                    </div>
-                                    <div class="fbLoginNotes">
-                                        ROBINS sẽ không bao giờ gửi bài viết hoặc chia sẻ thông tin mà chưa được sự dồng ý của bạn. </div>
                                 </div>
+                                <div class="fbLoginNotes">
+                                    ROBINS sẽ không bao giờ gửi bài viết hoặc chia sẻ thông tin mà chưa được sự dồng ý của bạn. </div>
                             </div>
                         </div>
                     </div>
@@ -70,3 +67,4 @@
             </div>
         </div>
     </div>
+</div>

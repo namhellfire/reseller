@@ -1,5 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { HttpModule }    from '@angular/http';
+import { FormsModule }   from '@angular/forms';
 
 import { AppComponent } from './app.component';
 import { MolHeaderComponent } from './modules/mol-header/mol-header.component';
@@ -25,6 +27,9 @@ import { ListProductPageComponent } from "./pages/list-product-page/list-product
 // routing
 import { routedComponents } from './routing'
 
+// services
+import { CredentialService } from "./services/credential.service";
+
 @NgModule({
   declarations: [
     //components
@@ -41,9 +46,9 @@ import { routedComponents } from './routing'
     HomeComponent, AuthenComponent,ListProductPageComponent,
   ],
   imports: [
-    BrowserModule,routedComponents
+    BrowserModule,routedComponents,HttpModule,FormsModule
   ],
-  providers: [],
+  providers: [CredentialService],
   bootstrap: [AppComponent,
   ]
 })
